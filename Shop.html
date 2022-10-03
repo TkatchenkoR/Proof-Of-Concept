@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="en">
+    
+<head>
+    <title>
+        Shop
+    </title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name = "D.C Creator" content="Robert Tkatchenko">
+    <meta name = "D.C Subject" content="Assignment">
+    <link rel="stylesheet" type="text/css" href = "eliteconditioning.css">
+    <link rel="stylesheet" type="text/css" href = "shop.css">
+    <script src="https://unpkg.com/vue@next"></script>       
+
+</head>
+
+<header>
+
+  <div class="special">
+    <a href="Programs.html">
+    GameFit Program now only $5!
+    </a>
+  </div>
+
+  <div class="topnav">
+
+    <!--Navigation Bar for other Pages-->
+    <div class="topnav-centered">
+      <a href="EC.html">Home</a>
+      <a href="Programs.html">Programs</a>
+      <a href="Story.html">Our Story</a>
+      <a class="active" href="Shop.html">Shop</a>
+      <a href="Contact.html">Contact Us</a>
+    </div>
+
+    <!--Social media Logos-->
+    <div class="topnav-right">
+      <a href="https://www.instagram.com/rtkatchenko_/">
+      <img src="ECHomeImages/instaLogo.png" alt="insta" width="35" height="35"/>
+      </a>
+      <a href="https://www.facebook.com/robert.tkatchenko">
+      <img src="ECHomeImages/facebookLogo.png" alt="fb" width="35" height="35"/>
+      </a>
+  </div>
+
+  <!--EC Logo-->
+  <div class="topnav-left">
+    <div class="logo">
+      <a href="EC.html">
+        <img src="ECHomeImages/EClogo.jpeg" alt="logo" width="60" height="60"/> </a>
+    </div>
+  </div>
+
+  </div>
+
+
+
+</header>
+
+<body>
+
+  <div id="app">
+
+    <img src="shopImages/css.shop.jpg" alt="shop" style="width:100%" height="460">
+    <div class="shop">Shop</div>
+
+
+    <center>
+     <span style="font-style: italic; line-height: 10px; text-decoration: underline;">Sorry,We're not quite yet ready...</span>
+      <p><strong>Let Us know What You would Like to See in the Shop :)</strong></p><br/>
+    </center>
+    <div style="margin: auto; width: max-content">
+      <form @submit="addItem">
+        <input v-model="add" placeholder="Add items..." type="text" required />
+        <button type="submit">Add</button>
+      </form>
+      <div class="space"></div>
+      <TransitionGroup tag="ul" style="list-style-type: none" name="list">
+        <li v-for="item in items" :key="item" style="height: 1.6em">
+          <button style= "background-color: rgb(93, 141, 180); color: black; font-size: x-small; border-radius: 0.5rem;" @click="remove(item)">Remove</button>
+          {{ item }}
+        </li>
+      </TransitionGroup>
+    </div>
+
+  <div class="whitespace"></div>
+   <footer>
+    <div class="outro">
+      <h3>Elite Conditioning</h3><br>Professional level training programs designed for you to become one of the elite
+    </div>
+  <div class="footer">
+    <small>
+      <i>
+        Copyright &copy; 2022 Elite Conditioning/SIT120 Introduction to Responsive Applications
+        <a href="s222154172@deakin.edu.au"> s222154172@deakin.edu.au</a>
+      </i>
+  </small>
+  </div>
+</footer>
+
+</div>
+<script src="shop.js"></script>
+</body>
+
+</html>

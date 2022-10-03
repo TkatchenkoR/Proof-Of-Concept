@@ -1,0 +1,119 @@
+<!DOCTYPE html> <!--Initialise HTML Document-->
+<html lang="en"> <!--Define HTML language-->
+
+<head> <!--HTML Head Header-->
+    <!--Tab Title-->
+      <title> 
+          Login 
+      </title>
+      <!--Meta variables-->
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width, initial-scale=1">
+      <meta name = "D.C Creator" content="Robert Tkatchenko">
+      <meta name = "D.C Subject" content="Assignment">
+      <link rel="stylesheet" type="text/css" href = "loginPage.css">
+      <script src="https://unpkg.com/vue@next"></script>       
+
+</head>
+
+
+<body>
+<div class="overflow">
+
+<div id="app">
+    <!--Image Slideshow in background -->
+    <ul class="cb-slideshow">
+        <li><span>Image 01</span></li>
+        <li><span>Image 02</span></li>
+        <li><span>Image 03</span></li>
+        <li><span>Image 04</span></li>
+        <li><span>Image 05</span></li>
+        <li><span>Image 06</span></li>
+    </ul> 
+    <!--Text Container -->
+    <div class="text-container">
+
+        <div id="contactus">
+            <h1>{{title}}</h1>
+            <div class="logo">
+                <a href="EC.html"> <img src="ECHomeImages/EClogo.jpeg" alt="logo" width="60" height="60"/> </a>
+            </div>
+        </div>
+
+        <!--Login Button-->
+        <div class="button loginButton">
+            <button onclick="document.getElementById('loginPage').style.display='block'" style="width:150px;">Login</button>
+        </div>
+        <!--Create Account Button-->
+        <div class="button CreateAccountButton">
+            <button onclick="document.getElementById('createAccountPage').style.display='block'" style="width:150px;">Create Account</button>
+        </div>
+        
+
+    </div>
+
+    <div id="loginPage" class="modal">
+        <form class="modal-content animate">
+            <div class="container">
+                <div id="app" v-cloak>
+                    <h1>{{ accountTitle }}</h1>
+                    <label for="uname"><b>Username</b></label>
+                    <input type="text" placeholder="Enter Username" name="uname" required>
+                
+                    <label for="psw"><b>Password</b></label>
+                    <br>
+                    <input v-if="showPassword" type="text".style.display='block'style="width:90%;" placeholder="Enter Password" v-model="password" required>
+                    <input v-else type="password".style.display='block'style="width:90%;" placeholder="Enter Password" v-model="password">
+                    <button type="button".style.display='block'style="width:10%;" @click="toggleShow">Show/Hide</button>
+                
+                
+                    <button type=button onclick="window.location.href='EC.html'".style.display='block'style="width:100%;">Login</button>
+                </div>
+            </div>
+             
+            <div class="container" style="background-color:#f1f1f1">
+                <button type="button" @click="say('Login Cancelled')" onclick="document.getElementById('loginPage').style.display='none'" class="cancelbtn">Cancel</button>
+            </div>
+
+        </form>
+    </div>
+
+    <div id="createAccountPage" class="modal">
+        <form class="modal-content animate">
+            <div class="container">
+                <div id="app" v-cloak>
+                    <account-form />
+                </div>
+            </div>
+
+            <div class="container" style="background-color:#f1f1f1">
+                <button type="button" @click="say('Account Cancelled')" onclick="document.getElementById('createAccountPage').style.display='none'" class="cancelbtn">Cancel</button>
+            </div>
+              
+
+        </form>
+    </div>
+
+    <script>
+        var modal = document.getElementById('loginPage');
+        var modal = document.getElementById('createAccountPage');
+
+
+        window.onclick = function(event) {
+            if (event.target == modal) {
+                modal.style.display = "none";
+            }
+        }
+    </script>
+
+        
+
+
+</div>
+
+<script src="loginPage.js"></script>
+
+
+
+</div>
+</body>

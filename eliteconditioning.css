@@ -106,7 +106,6 @@ body {
     margin-right: 110px;
 }
 .subhead {
-color: grey;
 margin-right: 20px;
 }
 
@@ -126,9 +125,6 @@ margin-right: 20px;
     margin-left: 90px;
     margin-top: 215px;
     margin-right: 815px;
-}
-.TBLsubhead {
-color: grey
 }
 
  .placement {
@@ -169,10 +165,6 @@ color: grey
         margin-top: 200px;
         margin-right: 800px;
         margin-bottom: 230px;
-    }
-
-    .CPTsubhead {
-        color: grey;
     }
 
     .replicate {

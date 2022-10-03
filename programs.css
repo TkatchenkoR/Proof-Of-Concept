@@ -1,0 +1,124 @@
+* {
+    font-family:Georgia, 'Times New Roman', Times, serif
+}
+
+.Programs {
+    position: relative;
+    margin-left:43%;
+    margin-right:45%;
+    bottom: 295px;
+    color: white;
+    font-size: 45px;
+    font-style: italic;
+}
+
+input[type=text], select, textarea {
+    width: 100%; 
+    padding: 12px; 
+    border: 1px solid #ccc; 
+    border-radius: 4px; 
+    margin-top: 6px; 
+  }
+
+
+
+  input[type=checkbox], select, textarea {
+    font-weight: lighter;
+  }
+
+  .ShoppingCart {
+    position: relative;
+    left: 1220px;
+    bottom: 100px;
+  }
+
+  .filter-container {
+    position: relative;
+    margin-right: 1050px;
+    margin-left: 120px;
+    bottom: 35px;
+    right: 55px;
+  }
+  .Sort-by {
+      border-top: 1px solid grey;
+      padding-top: 30px;
+      position:relative;
+      width: 100%;
+      padding-left: 100px;
+      font-size: smaller;
+      color:grey;
+      bottom: 30px;
+  } 
+  .products {
+    position:relative;
+    padding-left: 1100px;
+    bottom: 62px;
+    font-style: italic;
+  }
+  .padding {
+      border-top: 1px solid grey;
+      position: relative;
+      bottom: 100px;
+      padding-bottom: 10px;
+  }
+  .programtbl, td {
+    position: relative;
+    background-color:white;
+    color: black;
+    font-family:Georgia, 'Times New Roman', Times, serif;
+    font-weight: lighter;
+    font-size: 17px;
+    text-align: left;
+    padding: 25px;
+    bottom: 30px;
+    left: 5px;
+    border: white;
+  }
+.price {
+    color: grey;
+    font-weight: lighter;
+}
+.blockquote {
+  position: relative;
+  bottom: 50px;
+  left:25px;
+  font-size: 15px;
+}
+
+#addToCart {
+  position: relative;
+  left: 315px;
+  bottom: 38px;
+}
+
+.overflow {
+  overflow: hidden;
+}
+
+.shake {
+  animation: shake 0.82s cubic-bezier(0.36, 0.07, 0.19, 0.97) both;
+  transform: translate3d(0, 0, 0);
+}
+
+@keyframes shake {
+  10%,
+  90% {
+    transform: translate3d(-1px, 0, 0);
+  }
+
+  20%,
+  80% {
+    transform: translate3d(2px, 0, 0);
+  }
+
+  30%,
+  50%,
+  70% {
+    transform: translate3d(-4px, 0, 0);
+  }
+
+  40%,
+  60% {
+    transform: translate3d(4px, 0, 0);
+  }
+}

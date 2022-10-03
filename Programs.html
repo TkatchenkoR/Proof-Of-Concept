@@ -1,0 +1,211 @@
+<!DOCTYPE html>
+<html lang="en">
+    
+<head>
+    <title>
+        Programs
+    </title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name = "D.C Creator" content="Robert Tkatchenko">
+    <meta name = "D.C Subject" content="Assignment">
+    <link rel="stylesheet" href = "eliteconditioning.css">
+    <link rel="stylesheet" href = "programs.css">
+    <script src="https://unpkg.com/vue@next"></script>       
+
+</head>
+<div class="overflow">
+<body>
+  <div id="app">
+
+  <header>
+
+    <div class="special">
+      <a href="Programs.html">
+      GameFit Program now only $5!
+      </a>
+    </div>
+  
+    <div class="topnav">
+  
+      <!--Navigation Bar for other Pages-->
+      <div class="topnav-centered">
+        <a href="EC.html">Home</a>
+        <a class="active" href="Programs.html">Programs</a>
+        <a href="Story.html">Our Story</a>
+        <a href="Shop.html">Shop</a>
+        <a href="Contact.html">Contact Us</a>
+      </div>
+  
+      <!--Social media Logos-->
+      <div class="topnav-right">
+        <a href="https://www.instagram.com/rtkatchenko_/">
+        <img src="ECHomeImages/instaLogo.png" alt="insta" width="35" height="35"/>
+        </a>
+        <a href="https://www.facebook.com/robert.tkatchenko">
+        <img src="ECHomeImages/facebookLogo.png" alt="fb" width="35" height="35"/>
+        </a>
+    </div>
+
+    <!--EC Logo-->
+    <div class="topnav-left">
+      <div class="logo">
+        <a href="EC.html">
+          <img src="ECHomeImages/EClogo.jpeg" alt="logo" width="60" height="60"/> </a>
+      </div>
+      
+    </div>
+  
+    </div>
+  
+  
+
+  
+  </header>
+
+
+    <img src="ProgramImages/internal-slide.jpeg" alt="programs" style="width:100%" height="460">
+    <div class="Programs">Programs</div>
+    <div class="blockquote">
+    <blockquote>
+      "...performance depends upon a myriad of factors such as technical, tacticals, physiolgoical, mental but most IMPORTANTLY the physical conditioning of a player."
+      <a href="https://www.researchgate.net/publication/7768343_Physiology_of_Soccer">
+      (Physiology of Soccer,2005)</a>
+    </blockquote>
+    </div>
+    <div class="Sort-by">
+        SORT BY
+
+    <div class="filter-container">
+      <div id="sortBy">
+        <select v-model="selected">
+          <option disabled value="">Please Select an Option</option>
+          <option>Best Selling</option>
+          <option>Aplhabetically, A-Z</option>
+          <option>Aplhabetically, Z-A</option>
+          <option>Price, Low-High</option>
+          <option>Price, High-Low</option>
+        </select>
+        <span> Selected: {{ selected }}</span>
+      </div>
+
+    </div>
+
+
+    <div class="products">
+      6 Products  
+    </div>
+    <div class="ShoppingCart">
+      <a href="EC.html">
+        <img src="ProgramImages/shopingCart.png" alt="shopping cart" width="60" height="60"/> </a>
+    </div>
+    
+    </div>
+    <div class="padding"></div>
+    <table class="programtbl">
+        <tr>
+            <td>
+                <img src="ProgramImages/rashford.webp" alt="img1" width="400" height="350"><br>
+                GameFit Program
+                <br> <div class="price">$5.00</div>
+                <div id="addToCart">
+                  <button type="button" @click="say('GameFit Program Added to Cart')">Add to Cart</button>                             
+                </div>
+            </td>
+            <td>
+                <img src="ProgramImages/mechanics.jpeg" alt="img2" width="400" height="350"><br>
+                Speed Program<br> <div class="price">$10.00</div>
+                <div id="addToCart">
+                  <button type="button" @click="say('Speed Program Added to Cart')">Add to Cart</button>                 
+                </div>
+            </td>
+            <td>
+                <img src="ProgramImages/iniesta.jpeg" alt="img3" width="400" height="350"><br>
+                Ball Control Program<br> <div class="price">$25.00</div>
+                <div id="addToCart">
+                  <button type="button" @click="say('Ball Control Program Added to Cart')">Add to Cart</button>                 
+                </div>
+            </td>
+        </tr>
+        <tr>
+            <td>
+                <img src="ProgramImages/bosuball.jpeg" alt="img4" width="400" height="350"><br>
+                Off-Season Program<br> <div class="price">$30.00</div>
+                <div id="addToCart">
+                  <button type="button" @click="say('Off-Season Program Added to Cart')">Add to Cart</button>                 
+                </div>
+            </td>
+            <td>
+                <img src="ProgramImages/in-season.jpeg" alt="img5" width="400" height="350"><br>
+                In-Season program<br> <div class="price">$45.00</div>
+                <div id="addToCart">
+                  <button type="button" @click="say('In-Season program Added to Cart')">Add to Cart</button>                 
+                </div>
+            </td>
+            <td>
+                <img src="ProgramImages/ronaldo.png" alt="img6" width="400" height="350"><br>
+                Physique Specific<br> <div class="price">$50.00</div>
+                <div id="addToCart">
+                  <button type="button" @click="say('Physique Specific Added to Cart')">Add to Cart</button>                 
+                </div>
+            </td>
+        </tr>
+    </table>
+
+  
+
+
+    <!-- 
+    <script>
+      let app = Vue.createApp({
+        data() {
+          return {
+            inventory: {
+              gameFit: 0,
+              speed: 0,
+              ballControl: 0,
+              offSeason: 0,
+              inSeason: 0,
+              physique: 0,
+            },
+            cart: {
+              gameFit: 0,
+              speed: 0,
+              ballControl: 0,
+              offSeason: 0,
+              inSeason: 0,
+              physique: 0,
+            }
+          }
+        },
+        methods: {
+          addToCart(type) {
+            this.cart[type] += this.inventory[type]
+            console.log(this.cart)
+          }
+        }
+      }).mount('#app')
+    </script>
+    -->
+
+
+
+  <footer>
+      <div class="outro">
+        <h3>Elite Conditioning</h3><br>Professional level training programs designed for you to become one of the elite
+      </div>
+    <div class="footer">
+      <small>
+        <i>
+          Copyright &copy; 2022 Elite Conditioning/SIT120 Introduction to Responsive Applications
+          <a href="s222154172@deakin.edu.au"> s222154172@deakin.edu.au</a>
+        </i>
+    </small>
+    </div>
+  </footer>
+</div>
+<script src="programs.js"></script>
+</body>
+</div>
+
+</html>

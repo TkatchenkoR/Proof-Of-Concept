@@ -1,0 +1,68 @@
+
+.shop {
+    position: relative;
+    margin-left:45%;
+    margin-right:45%;
+    bottom: 295px;
+    color: white;
+    font-size: 45px;
+    font-style: italic;
+}
+.shopinfo {
+    position: relative;
+    padding-left: 50px;
+    line-height: 17px;
+    padding-bottom: 50px;
+    bottom: 30px;
+}
+.leftbartext {
+    position: absolute;
+    left:50px;
+    top: 800px;
+}
+.barcontainer {
+    background-color:rgb(99, 97, 97);
+    padding-bottom: 400px;
+}
+.middlebartext {
+    position: relative;
+    left:530px;
+    bottom:212px;
+    margin-right: 400px;
+    padding-right: 200px;
+}
+.rightbartext {
+    position: relative;
+    left: 1000px;
+    bottom:340px;
+    margin-right: 400px;
+}
+.subtext {
+    font-weight:lighter;
+    line-height: 22px; 
+    color: lightgray; 
+    font-size: larger;
+}
+.overflow {
+    overflow: hidden;
+}
+
+.list-enter-active,
+.list-leave-active {
+    transition: all 1s cubic-bezier(0.075, 0.82, 0.165, 1);
+}
+
+.list-enter-from,
+.list-leave-to {
+    opacity: 0;
+    transform: translateX(-2rem);
+}
+
+.whitespace {
+    width: max-content;
+    height: 50px;
+}
+.space {
+    width: max-content;
+    height: 10px;
+}

@@ -1,0 +1,107 @@
+.ourstory {
+    position: relative;
+    margin-left:43%;
+    margin-right:43%;
+    bottom: 295px;
+    color: white;
+    font-size: 45px;
+    font-style: italic;
+}
+.text {
+    position: relative;
+    padding-left: 100px;
+    padding-right: 295px;
+    bottom: 28px;
+}
+
+.container {
+    position: relative;
+}
+
+.image-sidebar {
+    position: relative;
+    left:1000px;
+    margin-right: 1000px;
+    bottom: 800px;
+
+}
+.subtext {
+    color:grey;
+    font-weight:lighter
+}
+.rpc {
+    position: relative;
+    bottom: 40px;
+    left:100px
+}
+.overflow {
+    overflow: hidden;
+}
+
+.navigation {
+    position: relative;
+    margin: 10px 0;
+    left: 30px;
+    bottom: 30px;
+  }
+  
+  .navigation ul {
+    margin: 0;
+    padding: 0;
+  }
+  
+  .navigation ul li {
+    display: inline-block;
+    margin-right: 20px;
+  }
+  
+  input, label, button {
+    display: block
+  }
+  
+  input, textarea {
+    margin-bottom: 10px;
+  }
+
+.pages {
+    position: relative;
+    left: 30px;
+    margin-bottom: 50px;
+}
+button {
+    background-color: rgb(93, 141, 180);
+    color: white;
+    padding: 14px 20px;
+    border-radius: 8px;
+    margin: 8px 0;
+    border: none;
+    cursor: pointer;
+  }
+  input[type=text], input[type=password], input[type=email],[type=number] {
+    padding: 12px 20px;
+    margin: 8px 0;
+    display: inline-block;
+    border: 1px solid #ccc;
+    box-sizing: border-box;
+  }
+
+  .list-enter-active,
+  .list-leave-active {
+      transition: all 1s cubic-bezier(0.075, 0.82, 0.165, 1);
+  }
+  
+  .list-enter-from,
+  .list-leave-to {
+      opacity: 0;
+      transform: translateX(-2rem);
+  }
+  
+  .fitnessGoals {
+    position: relative;
+    margin-bottom: 40px;
+  }
+  .goalsButton {
+    position: relative;
+    bottom: 60px;
+    left: 180px;
+  }

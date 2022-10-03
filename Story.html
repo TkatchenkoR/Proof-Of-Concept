@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="en">
+    
+<head>
+    <title>
+        Our Story
+    </title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name = "D.C Creator" content="Robert Tkatchenko">
+    <meta name = "D.C Subject" content="Assignment">
+    <link rel="stylesheet" type="text/css" href="eliteconditioning.css">
+    <link rel="stylesheet" type="text/css" href="ourstory.css">
+    <script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>       
+
+</head>
+
+
+<div class="overflow">
+<body>
+
+  <header>
+
+    <div class="special">
+      <a href="Programs.html">
+      GameFit Program now only $5!
+      </a>
+    </div>
+  
+    <div class="topnav">
+  
+      <!--Navigation Bar for other Pages-->
+      <div class="topnav-centered">
+        <a href="EC.html">Home</a>
+        <a href="Programs.html">Programs</a>
+        <a class="active" href="Story.html">Our Story</a>
+        <a href="Shop.html">Shop</a>
+        <a href="Contact.html">Contact Us</a>
+      </div>
+  
+      <!--Social media Logos-->
+      <div class="topnav-right">
+        <a href="https://www.instagram.com/rtkatchenko_/">
+        <img src="ECHomeImages/instaLogo.png" alt="insta" width="35" height="35"/>
+        </a>
+        <a href="https://www.facebook.com/robert.tkatchenko">
+        <img src="ECHomeImages/facebookLogo.png" alt="fb" width="35" height="35"/>
+        </a>
+    </div>
+
+    <!--EC Logo-->
+    <div class="topnav-left">
+      <div class="logo">
+        <a href="EC.html">
+          <img src="ECHomeImages/EClogo.jpeg" alt="logo" width="60" height="60"/> </a>
+      </div>
+    </div>
+  
+    </div>
+
+  </header>
+
+
+    <img src="ourStoryImages/css.ourstory.jpg" alt="story" style="width:100%" height="460"/>
+    <div class="ourstory">Our Story</div>
+
+    <div id="app">
+
+      <div class="navigation">
+        <ul>
+          <li><a href="#home" @click="switchTo('home')">Orign Of Website</a></li>
+          <li><a href="#about" @click="switchTo('about')">About the Author</a></li>
+          <li><a href="#playingCareer" @click="switchTo('playingCareer')">Playing Career</a></li>
+          <li><a href="#contact" @click="switchTo('contact')">Tell us Your Story!</a></li>
+        </ul>
+      </div>
+    
+
+      
+        <div class="pages">
+          <keep-alive>
+            <component v-bind:is="currentPage">
+            </component>
+          </keep-alive>
+        </div>
+
+
+    </div>
+
+
+<footer>
+  <div class="outro">
+    <h3>Elite Conditioning</h3><br>Professional level training programs designed for you to become one of the elite
+  </div>
+<div class="footer">
+  <small>
+    <i>
+      Copyright &copy; 2022 Elite Conditioning/SIT120 Introduction to Responsive Applications
+      <a href="s222154172@deakin.edu.au"> s222154172@deakin.edu.au</a>
+    </i>
+</small>
+</div>
+</footer>
+<script src="ourStory.js"></script>
+
+</body>
+
+</div>
+
+</html>
